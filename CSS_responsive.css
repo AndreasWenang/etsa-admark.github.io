@@ -475,6 +475,11 @@
         margin-left: 30;
         text-align: left;
       }
+
+      .main{
+        margin-top: 500  ;
+         background-color: white;
+        }
     
       .main .strip{
         display: none;
