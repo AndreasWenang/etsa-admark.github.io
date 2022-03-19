@@ -1,0 +1,21 @@
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("#product1_content").slideToggle("slow");
+    $("#product2_content").slideUp("slow");
+    $("#product3_content").slideUp("slow");
+  });
+  $("#btn2").click(function(){
+    $("#product2_content").slideToggle("slow");
+    $("#product1_content").slideUp("slow");
+    $("#product3_content").slideUp("slow");
+  });
+  $("#btn3").click(function(){
+    $("#product3_content").slideToggle("slow");
+    $("#product2_content").slideUp("slow");
+    $("#product1_content").slideUp("slow");
+  });
+
+  $(".menu").click(function(){
+    $(".nav").slideToggle("slow");
+  });
+});
