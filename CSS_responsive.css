@@ -382,9 +382,7 @@
        .main .productwrap{
         width: 100%;
         margin-top: 0;
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
+        
       }
 
        .main .productwrap .product1{
@@ -438,26 +436,46 @@
         font-family: 'inter-normal';
       }
 
+      .main .kenalkami .content{
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      .main .kenalkami .socialmedia{
+        margin-top: 70;
+        float: none;
+      }
+
       .main .kenalkami .contentline{
         margin-left: 95;
         margin-top: 66;
         width: 3;
         height: 250;
         background-color: rgb(0, 0, 0);
-        float: left;
+        float: none;
+        display: none;
       }
 
       .main .kenalkami .aplikasikami{
         margin-left: 0;
         margin-top: 70;
-        float: left;
+        width: 100%;
+        float: none;
+      }
+
+      .main .kenalkami .aplikasikami .preview_app{
+        
+        display: block;
+        width: 100%;
+        float: none;
       }
 
       .main .kenalkami .aplikasikami .demo1, .demo2, .demo3{
-        float: none;
-        padding: 20;
-        margin-left: 20;
+        padding: 0;
+        
         padding-top: 20;
+        float: none;
       }
   
       .nav .navhome{

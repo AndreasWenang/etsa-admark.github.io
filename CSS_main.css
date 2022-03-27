@@ -634,9 +634,8 @@ margin-top: 655  ;
 }
 
 .main .kenalkami .aplikasikami{
-  margin-left: 25;
+  margin-left: 400;
   margin-top: 70;
-  float: left;
 }
 
 .main .kenalkami .aplikasikami p{
@@ -647,6 +646,12 @@ margin-top: 655  ;
 .main .kenalkami .aplikasikami .subtitle{
   margin-bottom: 20;
   color: #00960E;
+}
+
+.main .kenalkami .aplikasikami .preview_app{
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
 }
 
 .main .kenalkami .aplikasikami .demovideo{
@@ -677,9 +682,9 @@ margin-top: 655  ;
 }
 
 .main .kenalkami .aplikasikami .demo1, .demo2, .demo3{
-  float: left;
   padding: 20;
   display: inline-block;
+  
 }
 
 .main .kenalkami .aplikasikami .demo1::after{

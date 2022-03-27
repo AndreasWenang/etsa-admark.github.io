@@ -7,9 +7,9 @@
   <link rel="icon" href="asset/logo etsa remastered.png">
   <link rel="stylesheet" href="CSS_main.css">
   <link rel="stylesheet" href="CSS_responsive.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
@@ -258,21 +258,24 @@
 
           <div class="aplikasikami">
             <p class="subtitle">Aplikasi Kami</p>
+            <div class="preview_app owl-carousel owl-theme">
             <div class="demo1" data-aos="fade-up">
               <p class="demotitle">Register dan Login</p>
-              <video class="demovideo" src="asset/app_demo.mp4" muted loop autoplay></video>
+              <video class="demovideo" src="asset/login.mp4" muted loop autoplay></video>
               <p class="demostep">Masukkan nama, E-mail, dan nomor handphone anda untuk mengakses aplikasi.</p>
             </div>
             <div class="demo2" data-aos="fade-up" data-aos-delay="100">
               <p class="demotitle">Pilihan Produk</p>
-              <video class="demovideo" src="asset/app_demo.mp4" muted loop autoplay></video>
+              <video class="demovideo" src="asset/pilihan produk.mp4" muted loop autoplay></video>
               <p class="demostep">Pilihlah produk sesuai ukuran dan lokasi yang anda inginkan.</p>
             </div>
             <div class="demo3" data-aos="fade-up" data-aos-delay="200">
               <p class="demotitle">Pembayaran</p>
-              <video class="demovideo" src="asset/app_demo.mp4" muted loop autoplay></video>
+              <video class="demovideo" src="asset/transaksi.mp4" muted loop autoplay></video>
               <p class="demostep">Bayar pesanan anda melalui rekening yang tertera pada aplikasi dan segera konfirmasi kepada perusahaan.</p>
             </div>
+            </div>
+            
           </div>
         </div>
         <a href="https://drive.google.com/file/d/1uuiz68BqeFbpsYUt6ltT5fd86HNFJUqG/view?usp=drivesdk">
@@ -431,7 +434,7 @@ $(document).ready(function() {
   if ( $(window).width() < 1300 ) {
     startCarousel();
   } else {
-    $('.productwrap').addClass('off');
+    $('.productwrap, .preview_app').addClass('off');
   }
 });
 
@@ -445,6 +448,67 @@ $(window).resize(function() {
 
 function startCarousel(){
   $(".productwrap").owlCarousel({
+    loop: true,
+    autoWidth: false,
+  responsive: {
+             0:{
+
+               center: true,
+               dots: true,
+               items:1.4,
+               nav: false
+             },
+             700:{
+               dots: true,
+               items:2,
+               nav: false
+             },
+             1300:{
+               items:3,
+               nav: false,
+               loop: false,
+               checkVisible: false
+             }
+           }
+  });
+
+  $(".preview_app").owlCarousel({
+    loop: false,
+    autoWidth:true,
+  responsive: {
+             0:{
+               margin: 55,
+               center: true,
+               dots: false,
+               items:1,
+               nav: true
+             },
+             700:{
+               dots: true,
+               items:2,
+               nav: false
+             },
+             1300:{
+               items:3,
+               nav: false,
+               loop: false,
+               checkVisible: false
+             }
+           }
+  });
+}
+function stopCarousel() {
+  var owl = $('.productwrap, .preview_app');
+  owl.trigger('destroy.owl.carousel');
+  owl.addClass('off');
+}
+
+
+</script>
+
+<!-- <script>
+  function startCarousel(){
+  $(".preview_app").owlCarousel({
     loop: true,
   responsive: {
              0:{
@@ -467,14 +531,7 @@ function startCarousel(){
            }
   });
 }
-function stopCarousel() {
-  var owl = $('.productwrap');
-  owl.trigger('destroy.owl.carousel');
-  owl.addClass('off');
-}
-
-
-</script>
+</script> -->
 
 
 
